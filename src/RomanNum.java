@@ -10,11 +10,9 @@ public class RomanNum {
         int ix = 0;
         while (ix < roman.length) {
             while (number >= decimal[ix]) {
-                var dd = number / decimal[ix];
+                int dd = number / decimal[ix];
                 number = number % decimal[ix];
-                for (int i=0; i<dd; i++) {
-                    rn.append(roman[ix]);
-                }
+                rn.append(String.valueOf(roman[ix]).repeat(Math.max(0, dd)));
             }
             ix++;
         }
