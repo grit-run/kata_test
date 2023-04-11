@@ -27,7 +27,7 @@ public class UCalc {
             isRomanN = false;
         }
         else {
-            throw new IOException("Числа должны быть в одной системе");
+            throw new IOException("Числа должны быть в одной системе исчисления");
         }
         if (digit[0] > 10 || digit[1] > 10) {
             throw new IOException("Числв не могут быть больше 10!");

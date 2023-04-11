@@ -1,5 +1,5 @@
 public class Addition {
-    static String[] romanList = new String[]{"0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+    static String[] romanList = new String[]{"00", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
 
     public static boolean isRoman(String r_val) {
         for (int i = 0; i < romanList.length; i++) {
@@ -29,6 +29,7 @@ public class Addition {
         if (oper.equals("+")) return n1+n2;
         if (oper.equals("-")) return n1-n2;
         if (oper.equals("*")) return n1*n2;
-        else return n1/n2;
+        if (n2 > 0) return n1/n2;
+        else throw new ArithmeticException("Деление на ноль не разрешено");
     }
 }
