@@ -36,7 +36,7 @@ public class UCalc {
         if (isRomanN) {
             if (result <= 0) {
                 throw new IOException("арабские цифры больше нуля");
-            };
+            }
             return RomanNum.decToRome(result);
         }
         else {
